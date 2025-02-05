@@ -1,11 +1,20 @@
+'use client';
+
 import { convertPriceFormat } from '@/lib/utils';
+import { useCartStore } from '@/stores/use-cart-store';
 import { Button } from './ui/button';
 
 export default function ProductCard({ product }: { product: any }) {
+	const addToCart = useCartStore((state) => state.addToCart);
+
+	function handleAddToCart() {
+		addToCart(product, 1);
+	}
+
 	return (
 		<div className='group relative space-y-1'>
 			<div className='bg-background/40 absolute inset-0 z-10 hidden place-items-center group-hover:grid'>
-				<Button size='lg' className='cursor-pointer rounded-full'>
+				<Button size='lg' className='cursor-pointer rounded-full' onClick={handleAddToCart}>
 					Сагсанд хийх
 				</Button>
 			</div>

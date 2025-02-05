@@ -1,4 +1,5 @@
 import BannersCarousel from '@/components/banners-carousel';
+import CartSidebar from '@/components/cart-sidebar';
 import Footer from '@/components/footer';
 import ProductTabs from '@/components/product-tabs';
 
@@ -10,11 +11,7 @@ export default function Home() {
 				<ProductTabs />
 				<Footer />
 			</div>
-			<div className='bg-background fixed top-20 right-0 hidden h-[calc(100svh-5rem)] max-h-[calc(100svh-5rem)] w-full flex-col overflow-y-auto border-l md:flex md:w-80'>
-				<div className='flex items-center border-b px-4 py-6'>
-					<h1 className='text-lg/normal font-bold uppercase'>Миний захиалга</h1>
-				</div>
-			</div>
+			<CartSidebar />
 		</div>
 	);
 }

@@ -1,10 +1,16 @@
+'use client';
+
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import usePersistStore from '@/hooks/use-persist-store';
+import { useCartStore } from '@/stores/use-cart-store';
 import Link from 'next/link';
 import { Container } from './container';
 import { MenuSheet } from './menu-sheet';
 import { Button } from './ui/button';
 
 export default function Header() {
+	const totalQuanity = usePersistStore(useCartStore, (state) => state.totalItems);
+
 	return (
 		<header className='bg-background fixed top-0 z-10 grid h-20 w-full place-items-center border-b shadow-sm'>
 			<Container className='flex h-full items-center'>
@@ -38,7 +44,7 @@ export default function Header() {
 				</div>
 				<div className='flex flex-1 items-center justify-end gap-2'>
 					<div className='grid size-14 place-items-center bg-[url("/images/bucket.svg")] bg-contain bg-no-repeat font-bold text-black'>
-						0
+						{totalQuanity}
 					</div>
 					<Button size='lg' className='text-base font-semibold'>
 						Нэвтрэх

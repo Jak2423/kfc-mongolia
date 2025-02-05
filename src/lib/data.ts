@@ -53,7 +53,7 @@ export const tendersData = [
 
 export const burgersData = [
    {
-      id: 1,
+      id: 11,
       name: "1 ХVНИЙ БУРГЕРТЭЙ БАГЦ",
       price: 15000,
       currency: "₮",
@@ -63,7 +63,7 @@ export const burgersData = [
       imageUrl: "/images/burgers/product1.png"
    },
    {
-      id: 2,
+      id: 12,
       name: "НАЙЗУУД БУРГЕРТЭЙ БАГЦ",
       price: 30000,
       currency: "₮",
@@ -73,7 +73,7 @@ export const burgersData = [
       imageUrl: "/images/burgers/product2.png"
    },
    {
-      id: 3,
+      id: 13,
       name: "Хамтдаа багц",
       price: 45000,
       currency: "₮",
@@ -83,7 +83,7 @@ export const burgersData = [
       imageUrl: "/images/burgers/product3.png"
    },
    {
-      id: 4,
+      id: 14,
       name: "Аялал багц",
       price: 60000,
       currency: "₮",
@@ -93,7 +93,7 @@ export const burgersData = [
       imageUrl: "/images/burgers/product4.png"
    },
    {
-      id: 5,
+      id: 15,
       name: "Парти багц",
       price: 70000,
       currency: "₮",
@@ -106,7 +106,7 @@ export const burgersData = [
 
 export const singelsData = [
    {
-      id: 1,
+      id: 21,
       name: "ГОД СОУСТАЙ КЕНЧИБАП",
       price: 12900,
       currency: "₮",
@@ -116,7 +116,7 @@ export const singelsData = [
       imageUrl: "/images/singels/product1.png"
    },
    {
-      id: 2,
+      id: 22,
       name: "ТЕРИЯКИ СОУСТАЙ КЕНЧИБАП",
       price: 12900,
       currency: "₮",
@@ -126,7 +126,7 @@ export const singelsData = [
       imageUrl: "/images/singels/product2.png"
    },
    {
-      id: 3,
+      id: 23,
       name: "ФИЛЛЕ БУРГЕР",
       price: 7000,
       currency: "₮",
@@ -136,7 +136,7 @@ export const singelsData = [
       imageUrl: "/images/singels/product3.png"
    },
    {
-      id: 4,
+      id: 24,
       name: "ЗИНГЕР БУРГЕР",
       price: 7000,
       currency: "₮",
@@ -146,7 +146,7 @@ export const singelsData = [
       imageUrl: "/images/singels/product4.png"
    },
    {
-      id: 5,
+      id: 25,
       name: "12ш ТАХИА",
       price: 50500,
       currency: "₮",
@@ -159,7 +159,7 @@ export const singelsData = [
 
 export const desertsData = [
    {
-      id: 1,
+      id: 31,
       name: "КОУЛСЛО",
       price: 2500,
       currency: "₮",
@@ -169,7 +169,7 @@ export const desertsData = [
       imageUrl: "/images/deserts/product1.png"
    },
    {
-      id: 2,
+      id: 32,
       name: "БУДАА",
       price: 1500,
       currency: "₮",
@@ -183,7 +183,7 @@ export const desertsData = [
 
 export const drinksData = [
    {
-      id: 1,
+      id: 41,
       name: "ЦЭВЭР УС",
       price: 1000,
       currency: "₮",
@@ -193,7 +193,7 @@ export const drinksData = [
       imageUrl: "/images/drinks/product1.png"
    },
    {
-      id: 2,
+      id: 42,
       name: "ЛИПТОН НОГООН ЦАЙ",
       price: 2500,
       currency: "₮",
@@ -203,7 +203,7 @@ export const drinksData = [
       imageUrl: "/images/drinks/product2.png"
    },
    {
-      id: 3,
+      id: 43,
       name: "LIPTON PEACH",
       price: 2500,
       currency: "₮",
@@ -213,7 +213,7 @@ export const drinksData = [
       imageUrl: "/images/drinks/product3.png"
    },
    {
-      id: 4,
+      id: 44,
       name: "PEPSI 1,25л",
       price: 4000,
       currency: "₮",
