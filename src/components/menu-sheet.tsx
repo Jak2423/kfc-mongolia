@@ -51,14 +51,14 @@ export function MenuSheet() {
 				</div>
 				<div className='flex flex-col divide-y px-4'>
 					<Link
-						href='#'
+						href='/#'
 						className='flex items-center justify-between py-3 text-lg font-semibold'
 					>
 						Меню
 						<ChevronRight />
 					</Link>
 					<Link
-						href='#'
+						href='/#'
 						className='flex items-center justify-between py-3 text-lg font-semibold'
 					>
 						Салбар
