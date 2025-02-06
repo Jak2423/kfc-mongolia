@@ -96,6 +96,12 @@
 	padding-inline: 2rem;
 }
 
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: thin;
+	scrollbar-color: #27272a transparent;
+}
+
 input[type='number'] {
 	-moz-appearance: textfield;
 	appearance: textfield;

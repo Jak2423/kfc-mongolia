@@ -17,32 +17,31 @@ export default function CartSidebar() {
 			<div className='flex items-center border-b px-4 py-6'>
 				<h1 className='text-lg/normal font-bold uppercase'>Миний захиалга</h1>
 			</div>
-			<div className='flex h-full flex-col justify-between'>
-				{cart && cart.length > 0 ? (
-					<>
-						<div className='flex-1 divide-y px-4 py-6'>
-							{cart.map((item) => (
-								<div
-									key={`${item.id}_${item.variant_id}`}
-									className='relative flex items-start justify-between gap-x-2 py-4'
-								>
-									<div className='absolute z-40 -mt-2 -ml-2'>
-										<RemoveItemButton item={item} />
-									</div>
-									<div className='flex items-start gap-x-4'>
-										<img
-											src={item.imageUrl}
-											alt={''}
-											className='aspect-[1/1] size-16 rounded-lg object-cover object-center'
-										/>
-										<div className='flex-auto space-y-1'>
-											<h3 className='mb-0 line-clamp-2 text-sm font-semibold'>
-												{item?.name}
-											</h3>
-											<p className='text-muted-foreground text-sm'>
-												{!!(item?.options && item?.options.length) &&
-													`
-                              ${(item?.options || [])
+			{cart && cart.length > 0 ? (
+				<div className='flex h-full flex-col justify-between'>
+					<div className='h-[calc(100svh-17.0.5rem)] max-h-[calc(100svh-17.05rem)] flex-1 divide-y overflow-y-auto px-4 py-2'>
+						{cart.map((item) => (
+							<div
+								key={`${item.id}_${item.variant_id}`}
+								className='relative flex items-start justify-between gap-x-2 py-4'
+							>
+								<div className='absolute z-40 -mt-2 -ml-2'>
+									<RemoveItemButton item={item} />
+								</div>
+								<div className='flex items-start gap-x-4'>
+									<img
+										src={item.imageUrl}
+										alt={''}
+										className='aspect-[1/1] size-16 rounded-lg object-cover object-center'
+									/>
+									<div className='flex-auto space-y-1'>
+										<h3 className='mb-0 line-clamp-2 text-sm font-semibold'>
+											{item?.name}
+										</h3>
+										<p className='text-muted-foreground text-sm'>
+											{!!(item?.options && item?.options.length) &&
+												`
+                             ${(item?.options || [])
 											.map(
 												(option: any) =>
 													`${option.title}: ${
@@ -52,38 +51,37 @@ export default function CartSidebar() {
 													}`,
 											)
 											.join(', ')}
-                           `}
-											</p>
-										</div>
-									</div>
-									<div className='flex flex-col items-end space-y-1'>
-										<p className='flex-none text-sm font-semibold'>
-											{convertPriceFormat(item?.price)}₮
+                          `}
 										</p>
-										<EditItemQuantityButton item={item} />
 									</div>
 								</div>
-							))}
-						</div>
-						<div className='mt-auto space-y-4 border-t px-4 py-4'>
-							<p className='text-lg font-medium'>
-								Нийт дүн:{' '}
-								<span className='text-primary font-semibold'>
-									{convertPriceFormat(totalPrice || 0)}₮
-								</span>
-							</p>
-							<Button size='lg' className='w-full text-base font-semibold'>
-								Захиалга хийх
-							</Button>
-						</div>
-					</>
-				) : (
-					<div className='grid place-items-center space-y-2'>
-						<img src='/empty.svg' alt='' className='w-full' />
-						<p className='text-muted-foreground -mt-40 text-lg'>Таны сагс хоосон байна.</p>
+								<div className='flex flex-col items-end space-y-1'>
+									<p className='flex-none text-sm font-semibold'>
+										{convertPriceFormat(item?.price)}₮
+									</p>
+									<EditItemQuantityButton item={item} />
+								</div>
+							</div>
+						))}
 					</div>
-				)}
-			</div>
+					<div className='mt-auto space-y-4 border-t px-4 py-4'>
+						<p className='text-lg font-medium'>
+							Нийт дүн:{' '}
+							<span className='text-primary font-semibold'>
+								{convertPriceFormat(totalPrice || 0)}₮
+							</span>
+						</p>
+						<Button size='lg' className='w-full text-base font-semibold'>
+							Захиалга хийх
+						</Button>
+					</div>
+				</div>
+			) : (
+				<div className='grid place-items-center space-y-2'>
+					<img src='/empty.svg' alt='' className='w-full' />
+					<p className='text-muted-foreground -mt-40 text-lg'>Таны сагс хоосон байна.</p>
+				</div>
+			)}
 		</div>
 	);
 }
