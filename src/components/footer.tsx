@@ -70,7 +70,7 @@ export default function Footer() {
 				<div className='border-border flex flex-col items-center justify-center gap-4 border-t py-2 lg:flex-row lg:justify-between'>
 					<span className='text-muted-foreground flex flex-wrap text-sm/6'>
 						&copy; {new Date().getFullYear()} KFC Монгол. Зохиогчийн эрх хуулиар
-						хамгаалагдсан. Developed by Tavanbogd Cubix LLC
+						хамгаалагдсан. Developed By Tavanbogd Foods IT-Team Ulziibat
 					</span>
 					<div className='text-muted-foreground flex items-center gap-4 text-sm/6'>
 						<Link
